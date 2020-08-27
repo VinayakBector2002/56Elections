@@ -2,7 +2,7 @@
 import random
 
 #Making a list of candidates 
-list1= ['Aakriti','Antara','Romil']
+list1= ['Candidate1','Candidate2','Candidate3']
 
 #Initializing value of State 
 State = True
@@ -10,10 +10,10 @@ State = True
 #Using While loop to generate mutliple sequence 
 while State:
     #Generating random Values for the sequence
-    for i in random.sample(range(0,3), 3):
-        #printing the list 
-        print(list1[i],end = "   ")
-    print()
+    print(random.sample(list1, 3))
     #Updating value of state to prevent infinte loop
-    State = int(input("Enter 1 or 0  "))
+    try :
+        State = int(input("Enter 1 or 0  "))
+    except ValueError:
+        continue 
 print("EOP")
